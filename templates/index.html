@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="author" content="Nama Penulis Anda">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins&display=swap">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <meta property="og:title" content="Blackpink Fanbook Site" />
+    <meta property="og:description" content="Tulis semua ucapan kamu untuk idola kamu" />
+    <meta property="og:image" content="{{ url_for('static', filename = 'bplogo.jpg') }}" />
+    <link rel="icon" href="static/bplogo.jpg" type="image/jpg">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/spin.js/2.3.2/spin.min.js"></script>
+
+    <!-- Import CSS -->
+    <link rel="stylesheet" href="static/style.css">
+    <!-- Import JQuery -->
+    <script src="static/script.js"></script>
+
+  <title>Blackpink Fanbook Site</title>
+</head>
+
+<body>
+    <div class="mypic">
+        <h1>Blackpink Fan Book</h1>
+        <p>Current Temperature in Palembang: <span id="temp"></span> degrees</p>
+    </div>
+    <div class="mypost">
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="name" placeholder="Enter your nickname">
+            <label for="name">Nickname</label>
+        </div>
+        <div class="form-floating">
+            <textarea class="form-control" placeholder="Leave a comment here" id="comment"></textarea>
+            <label for="comment">Fan Message</label>
+        </div>
+        <button onclick="save_comment()" type="button" class="btn btn-dark">Leave a fan message</button>
+    </div>
+    <div id="loading"></div>
+    <div class="mycards" id="comment-list">
+    
+    </div>
+</body>
+
+</html>
